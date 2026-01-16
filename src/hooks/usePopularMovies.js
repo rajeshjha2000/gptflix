@@ -17,7 +17,9 @@ const usePopularMovies = () => {
     const json = await data.json();
     dispatch(addPopularMovies(json.results));
   };
-
+  
+  // Memoization
+  // if popularMovies has no data in store then make an API call otherwise need not to make API call
   useEffect(() => {
     !popularMovies && getPopularMovies();
   }, []);

@@ -68,7 +68,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -84,8 +83,8 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute">
-        <img className="h-screen object-cover" src={BG_URL} alt="logo" />
+      <div className="fixed">
+        <img className="w-screen h-screen object-cover" src={BG_URL} alt="logo" />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}

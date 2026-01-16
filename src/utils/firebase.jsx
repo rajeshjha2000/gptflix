@@ -21,7 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Wrap analytics in try-catch to prevent app crash if analytics fails to initialize
-let analytics = null;
+export let analytics = null;
 try {
   analytics = getAnalytics(app);
 } catch (error) {

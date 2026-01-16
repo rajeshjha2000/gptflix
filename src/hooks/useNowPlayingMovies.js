@@ -19,7 +19,12 @@ const useNowPlayingMovies = () => {
     const json = await data.json();
     dispatch(addNowPlayingMovies(json.results));
   };
-
+ 
+  // Memoization
+  // if nowPlayingMovies has no data in store then make an API call otherwise need not to make API call
+  useEffect(() => {
+    !nowPlayingMovies && getNowPlayingMovies();
+  }, []);
 };
 
 export default useNowPlayingMovies;

@@ -21,6 +21,9 @@ const useMovieTrailer = (movieId) => {
     const trailer = filterData.length ? filterData[0] : json.results[0];
     dispatch(addTrailerVideo(trailer));
   };
+
+  // Memoization
+  // if movieTrailer has no data in store then make an API call otherwise need not to make API call
   useEffect(() => {
     !trailerVideo && getMovieVideos();
   }, []);
