@@ -17,7 +17,7 @@ It's built using **React + Vite**, integrates with movie APIs and AI models, and
 ✨ **AI-Driven Search & Recommendations**  
 Ask for movie suggestions using natural language — GPT (OpenAI) understands your intent and helps you discover movies that match your mood, genre preference.
 
-🎥 ** Movie Browser**  
+🎥 **Movie Browser**  
 Explore a sleek browsing UI with featured movies, categories, and details.
 
 🔍 **Smart Search Bar**  
